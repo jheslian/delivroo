@@ -3,7 +3,7 @@ import { Text, View, ImageBackground } from "react-native";
 
 export default class Card extends React.Component {
   render() {
-    const { url, name, width, height } = this.props;
+    const { source, name, width, height } = this.props;
     return (
       <View>
         <ImageBackground
@@ -15,9 +15,7 @@ export default class Card extends React.Component {
             overflow: "hidden",
             position: "relative",
           }}
-          source={{
-            uri: url,
-          }}>
+          source={source}>
           <Text
             style={{
               color: "white",

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
+import { StyleSheet, View, ScrollView, Text } from "react-native";
 import { Container, Content } from "native-base";
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
@@ -8,51 +8,71 @@ import SecondCarousel from "../component/homeMenu/SecondCarousel";
 export default function HomeMenu() {
   const foodType = [
     {
-      url:
-        "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
-      name: "Shakira",
+      source: require("../assets/images/Categories/Discount.png"),
+      name: "Offres",
     },
     {
-      url:
-        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
-      name: "cat",
+      source: require("../assets/images/Categories/Groceries.png"),
+      name: "Épicerie",
     },
     {
-      url:
-        "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
-      name: "baby",
+      source: require("../assets/images/Categories/Pizza.png"),
+      name: "Pizza",
     },
     {
-      url:
-        "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
-      name: "Shakira",
+      source: require("../assets/images/Categories/Burger.png"),
+      name: "Burger",
     },
     {
-      url:
-        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
-      name: "cat",
+      source: require("../assets/images/Categories/Sandwich.png"),
+      name: "Sandwich",
     },
     {
-      url:
-        "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
-      name: "baby",
+      source: require("../assets/images/Categories/Dessert.png"),
+      name: "Dessert",
+    },
+    {
+      source: require("../assets/images/Categories/Breakfast.png"),
+      name: "Petit déjeuner",
+    },
+    {
+      source: require("../assets/images/Categories/Sushi.png"),
+      name: "Sushi",
+    },
+    {
+      source: require("../assets/images/Categories/Tacos.png"),
+      name: "Tacos",
+    },
+    {
+      source: require("../assets/images/Categories/PokeBowl.png"),
+      name: "Poke Bowl",
+    },
+    {
+      source: require("../assets/images/Categories/kebab.png"),
+      name: "Kebab",
+    },
+    {
+      source: require("../assets/images/Categories/Vietnamese.png"),
+      name: "Vietnamien",
+    },
+    {
+      source: require("../assets/images/Categories/Bagel.png"),
+      name: "Bagels",
     },
   ];
 
   return (
     <Container style={styles.container}>
+      <HeaderHome />
       <ScrollView>
         <Content>
-          <ScrollView horizontal={true}>
-            <HeaderHome />
-          </ScrollView>
           <ScrollView horizontal={true}>
             {foodType.map((photo, index) => {
               return (
                 <View key={index}>
                   <Card
                     name={photo.name}
-                    url={photo.url}
+                    source={photo.source}
                     width={75}
                     height={75}
                   />
