@@ -12,151 +12,84 @@ import Card from "../component/homeMenu/Card";
 export default function HomeMenu() {
   const foodType = [
     {
-      url:
-        "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
-      name: "shakira",
+      source:
+        require("../assets/images/cateories/Discount.png"),
+      name: "Offres",
     },
     {
-      url:
-        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
-      name: "cat",
+      source:
+        require("../assets/images/cateories/Groceries.png"),
+      name: "Épicerie",
     },
     {
-      url:
-        "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
-      name: "baby",
+      source:
+        require("../assets/images/cateories/Pizza.png"),
+      name: "Pizza",
     },
     {
-      url:
-        "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
-      name: "shakira",
+      source:
+        require("../assets/images/cateories/Burger.png"),
+      name: "Burger",
     },
     {
-      url:
-        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
-      name: "cat",
+      source:
+        require("../assets/images/cateories/Sandwich.png"),
+      name: "Sandwich",
     },
     {
-      url:
-        "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
-      name: "baby",
+      source:
+        require("../assets/images/cateories/Dessert.png"),
+      name: "Dessert",
+    },
+    {
+      source:
+        require("../assets/images/cateories/Breakfast.png"),
+      name: "Petit déjeuner",
+    },
+    {
+      source:
+        require("../assets/images/cateories/Sushi.png"),
+      name: "Sushi",
+    },
+    {
+      source:
+        require("../assets/images/cateories/Tacos.png"),
+      name: "Tacos",
+    },
+    {
+      source:
+        require("../assets/images/cateories/PokeBowl.png"),
+      name: "Poke Bowl",
+    },
+    {
+      source:
+        require("../assets/images/cateories/Kebab.png"),
+      name: "Kebab",
+    },
+    {
+      source:
+        require("../assets/images/cateories/Vietnamese.png"),
+      name: "Vietnamien",
+    },
+    {
+      source:
+        require("../assets/images/cateories/Bagel.png"),
+      name: "Bagels",
     },
   ];
 
   return (
     <Container>
       <ScrollView>
-        <Text>Test 2</Text>
+        <Text>Test</Text>
         <Content>
-          <ScrollView horizontal={true}>
-            <View style={styles.header}>
-              <Text>test</Text>
-              <Text>test</Text>
-              <Text>test</Text>
-              <Text>test</Text>
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                style={styles.logo}
-                source={{
-                  uri:
-                    "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
-                }}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-              <Image
-                source={require("../assets/images/user_icon.png")}
-              />
-            </View>
-          </ScrollView>
           <ScrollView horizontal={true}>
             {foodType.map(photo => {
               return (
                 <View>
                   <Card
                     name={photo.name}
-                    url={photo.url}
+                    source={photo.source}
                     width={75}
                     height={75}
                   />
