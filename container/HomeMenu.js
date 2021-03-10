@@ -1,7 +1,12 @@
 import * as React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+} from "react-native";
 import { Container, Header, Content, Tab, Tabs } from "native-base";
-import Swiper from "react-native-swipe-image";
 
 export default function HomeMenu() {
   const photos = {
@@ -25,37 +30,121 @@ export default function HomeMenu() {
   };
   return (
     <Container>
-      <Container style={styles.header}>
-        <Image
-          style={styles.logo}
-          source={require("../assets/images/images.jpeg")}
-        />
-        <View style={styles.header_column}>
-          <Text style={styles.now}>Now</Text>
-          <Text style={styles.location}>Current Location</Text>
-        </View>
-        <Image
-          style={styles.logo}
-          source={require("../assets/images/user_icon.png")}
-        />
-      </Container>
-      <Header hasTabs />
-      <Tabs>
-        <Tab heading="Livraison">
-          <Text>Restaurants Livraisons</Text>
-        </Tab>
-        <Tab heading="&Agrave; Emporter">
-          <Text>Restaurants Emporté</Text>
-        </Tab>
-      </Tabs>
-      <Swiper
-        images={photos.images}
-        imageHeight={500}
-        textSize={35}
-        textBold={true}
-        textColor={"red"}
-        textUnderline={true}
-      />
+      <ScrollView>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Text>Test 2</Text>
+        <Content>
+          <ScrollView horizontal={true}>
+            <View style={styles.header}>
+              <Text>test</Text>
+              <Text>test</Text>
+              <Text>test</Text>
+              <Text>test</Text>
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                style={styles.logo}
+                source={{
+                  uri:
+                    "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
+                }}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+              <Image
+                source={require("../assets/images/user_icon.png")}
+              />
+            </View>
+          </ScrollView>
+        </Content>
+      </ScrollView>
     </Container>
   );
 }
@@ -66,7 +155,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     flex: 1,
     flexDirection: "row",
-    alignItems: "flex-start",
+    alignItems: "center",
   },
   header_column: {
     flex: 1,

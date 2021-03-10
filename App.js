@@ -24,18 +24,7 @@ export default function App() {
       },
     ],
   };
-  return (
-    <View style={styles.container}>
-      <Swiper
-        images={photos.images}
-        imageHeight={500}
-        textSize={35}
-        textBold={true}
-        textColor={"red"}
-        textUnderline={true}
-      />
-    </View>
-  );
+  return <HomeMenu />;
 }
 
 const styles = StyleSheet.create({
