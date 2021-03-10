@@ -3,6 +3,7 @@ import { StyleSheet, View, ScrollView } from "react-native";
 import { Container, Content } from "native-base";
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
+import SecondCarousel from "../component/homeMenu/SecondCarousel";
 
 export default function HomeMenu() {
   const foodType = [
@@ -59,6 +60,9 @@ export default function HomeMenu() {
               );
             })}
           </ScrollView>
+          <ScrollView horizontal={true}>
+            <SecondCarousel />
+          </ScrollView>
         </Content>
       </ScrollView>
     </Container>
@@ -71,11 +75,5 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-  },
-  now: {
-    color: "#abadac",
-  },
-  location: {
-    color: "#2e3434",
   },
 });
