@@ -4,6 +4,7 @@ import { Container, Content } from "native-base";
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
 import SecondCarousel from "../component/homeMenu/SecondCarousel";
+import ThirdCarousel from "../component/homeMenu/ThirdCarousel";
 
 export default function HomeMenu() {
   const foodType = [
@@ -45,7 +46,7 @@ export default function HomeMenu() {
     },
     {
       source: require("../assets/images/Categories/PokeBowl.png"),
-      name: "Poke Bowl",
+      name: "Poke-Bowl",
     },
     {
       source: require("../assets/images/Categories/kebab.png"),
@@ -53,7 +54,7 @@ export default function HomeMenu() {
     },
     {
       source: require("../assets/images/Categories/Vietnamese.png"),
-      name: "Vietnamien",
+      name: "Viet",
     },
     {
       source: require("../assets/images/Categories/Bagel.png"),
@@ -73,8 +74,8 @@ export default function HomeMenu() {
                   <Card
                     name={photo.name}
                     source={photo.source}
-                    width={75}
-                    height={75}
+                    width={85}
+                    height={85}
                   />
                 </View>
               );
@@ -82,6 +83,10 @@ export default function HomeMenu() {
           </ScrollView>
           <ScrollView horizontal={true}>
             <SecondCarousel />
+          </ScrollView>
+          <ScrollView>
+            <ThirdCarousel />
+            <ThirdCarousel />
           </ScrollView>
         </Content>
       </ScrollView>
