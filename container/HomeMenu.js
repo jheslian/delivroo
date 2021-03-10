@@ -7,38 +7,45 @@ import {
   ScrollView,
 } from "react-native";
 import { Container, Header, Content, Tab, Tabs } from "native-base";
+import Card from "../component/homeMenu/Card";
 
 export default function HomeMenu() {
-  const photos = {
-    images: [
-      {
-        url:
-          "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
-        name: "shakira",
-      },
-      {
-        url:
-          "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
-        name: "cat",
-      },
-      {
-        url:
-          "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
-        name: "baby",
-      },
-    ],
-  };
+  const foodType = [
+    {
+      url:
+        "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
+      name: "shakira",
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
+      name: "cat",
+    },
+    {
+      url:
+        "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
+      name: "baby",
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
+      name: "shakira",
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
+      name: "cat",
+    },
+    {
+      url:
+        "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
+      name: "baby",
+    },
+  ];
+
   return (
     <Container>
       <ScrollView>
-        <Text>Test 2</Text>
-        <Text>Test 2</Text>
-        <Text>Test 2</Text>
-        <Text>Test 2</Text>
-        <Text>Test 2</Text>
-        <Text>Test 2</Text>
-        <Text>Test 2</Text>
-        <Text>Test 2</Text>
         <Text>Test 2</Text>
         <Content>
           <ScrollView horizontal={true}>
@@ -143,6 +150,20 @@ export default function HomeMenu() {
               />
             </View>
           </ScrollView>
+          <ScrollView horizontal={true}>
+            {foodType.map(photo => {
+              return (
+                <View>
+                  <Card
+                    name={photo.name}
+                    url={photo.url}
+                    width={75}
+                    height={75}
+                  />
+                </View>
+              );
+            })}
+          </ScrollView>
         </Content>
       </ScrollView>
     </Container>
@@ -166,6 +187,24 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
+  },
+  foodTypeImage: {
+    width: 75,
+    height: 75,
+    marginLeft: 10,
+    borderRadius: 5,
+    overflow: "hidden",
+    position: "relative",
+  },
+  foodTypeText: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    marginBottom: 5,
+    marginLeft: 10,
   },
   now: {
     color: "#abadac",
