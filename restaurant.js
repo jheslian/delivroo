@@ -1,11 +1,13 @@
 export const db = [
   {
     restaurantName: "Wow Galette",
+    description:
+      "la meilleur galette de toute la terre et bien plus encore!",
     distance: "2.8",
     fee: "2.99 delivery",
     promo: "Spend €35, get 15% off",
     note: 5.0,
-    category: ["poisson", "porc", "halal"],
+    category: "Pizza",
     listsDish: [
       {
         name: "Galette viande boeuf",
@@ -19,14 +21,14 @@ export const db = [
         name: "Assiette variétés",
         price: 9.0,
         description: "1 brochette + 1 pain libanais.",
-        url: require("./assets/images/restos/galetteViande.png"),
+        url: require("./assets/images/restos/asVar.png"),
         popular: false,
       },
       {
         name: "Assiette 5 variétés",
-        price: "9.00",
+        price: 9.0,
         description: "2 brochettes  + 4 accompagnements",
-        url: "./assets/images/restos/ass5var.png",
+        url: "./assets/images/restos/laVeg.png",
         popular: true,
       },
     ],

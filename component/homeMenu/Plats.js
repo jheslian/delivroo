@@ -17,7 +17,12 @@ export default class Plats extends React.Component {
 
     const pressHandler = () => {
       console.log("test");
-      navigation.navigate("Order");
+      navigation.navigate("Order", {
+        name: title,
+        description,
+        price,
+        url: pathPlats,
+      });
     };
 
     return (
@@ -34,8 +39,12 @@ export default class Plats extends React.Component {
                 </Row>
                 <Row size={30}>
                   <Text style={{ color: "#ABADAC" }}>
-                    {price}.{" "}
-                    <Text style={{ color: "orange" }}>{popular}</Text>
+                    {price}. € -
+                    {popular ? (
+                      <Text style={{ color: "orange" }}>
+                        Populaire
+                      </Text>
+                    ) : null}
                   </Text>
                 </Row>
               </Col>
