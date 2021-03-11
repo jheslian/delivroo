@@ -58,6 +58,7 @@ export default class ShowRestaurants extends React.Component {
       },
     ];
 
+    const { navigation } = this.props;
     return (
       <Container style={{ marginTop: 100 }}>
         <Grid>
@@ -86,6 +87,7 @@ export default class ShowRestaurants extends React.Component {
                     <View key={index}>
                       <Plats
                         description={menu.description}
+                        navigation={navigation}
                         pathPlats={menu.url}
                         price={menu.price}
                         popular={menu.popular}

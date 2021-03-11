@@ -16,7 +16,6 @@ export default class HeaderHome extends React.Component {
 
   goLogin = () => {
     const { navigateToLogin } = this.props;
-    console.log("triggered");
     navigateToLogin();
   };
 

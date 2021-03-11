@@ -1,9 +1,10 @@
 import * as React from "react";
+
 import { StyleSheet, View, ScrollView, Text } from "react-native";
-import { Container, Content } from "native-base";
+import { Container } from "native-base";
+
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
-
 import RestoH from "../container/RestoH";
 
 export default class HomeMenu extends React.Component {

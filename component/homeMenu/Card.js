@@ -19,6 +19,7 @@ export default class Card extends React.Component {
     const pressHandler = () => {
       navigation.navigate("Restaurant");
     };
+
     return (
       <View>
         <TouchableOpacity onPress={pressHandler}>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View, ScrollView, Text } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import RestoCatDesc from "../component/restoCategory/RestoCatDesc";
 import RestoCatImage from "../component/restoCategory/RestoCatImage";
 
@@ -54,19 +54,19 @@ export default class RestoPerCategory extends React.Component {
 
     return (
       <View style={styles.container}>
-        <ScrollView >
+        <ScrollView>
           {foodDesc.map((details, index) => {
             return (
               <View key={index}>
                 <RestoCatImage url={details.url} />
-                  <RestoCatDesc
-                    name={details.name}
-                    fee={details.fee}
-                    description={details.description}
-                    distance={details.distance}
-                    promo={details.promo}
-                    others={details.others}
-                  />
+                <RestoCatDesc
+                  name={details.name}
+                  fee={details.fee}
+                  description={details.description}
+                  distance={details.distance}
+                  promo={details.promo}
+                  others={details.others}
+                />
               </View>
             );
           })}

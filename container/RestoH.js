@@ -5,7 +5,6 @@ import {
   ScrollView,
   ImageBackground,
   TouchableOpacity,
-  Text,
 } from "react-native";
 
 export default class RestoH extends React.Component {
