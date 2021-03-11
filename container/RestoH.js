@@ -1,5 +1,10 @@
 import * as React from "react";
-import { StyleSheet, View, ScrollView, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  ImageBackground,
+} from "react-native";
 
 export default class RestoPerCategory extends React.Component {
   constructor() {
@@ -50,6 +55,8 @@ export default class RestoPerCategory extends React.Component {
       },
     ];
 
+    const { width,height } = this.props;
+
     return (
       <View style={styles.container}>
         <ScrollView horizontal={true}>
@@ -58,8 +65,8 @@ export default class RestoPerCategory extends React.Component {
               <View key={index}>
                 <ImageBackground
                   style={{
-                    width: 250,
-                    height: 175,
+                    width: width,
+                    height: height,
                     marginLeft: 10,
                     borderRadius: 5,
                     overflow: "hidden",

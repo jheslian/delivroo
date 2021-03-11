@@ -4,8 +4,6 @@ import { Container, Content } from "native-base";
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
 
-import ThirdCarousel from "../component/homeMenu/ThirdCarousel";
-
 import RestoH from "../container/RestoH";
 
 export default class HomeMenu extends React.Component {
@@ -94,19 +92,19 @@ export default class HomeMenu extends React.Component {
               })}
             </ScrollView>
             <ScrollView>
-              <RestoH />
+              <RestoH height={150} width={320} />
             </ScrollView>
             <ScrollView>
-              <RestoH />
+              <RestoH height={175} width={300} />
             </ScrollView>
             <ScrollView>
-              <RestoH />
+              <RestoH height={200} width={350} />
             </ScrollView>
             <ScrollView>
-              <RestoH />
+              <RestoH height={200} width={250} />
             </ScrollView>
             <ScrollView>
-              <RestoH />
+              <RestoH height={200} width={200} />
             </ScrollView>
           </Content>
         </ScrollView>
