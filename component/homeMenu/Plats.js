@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, View, Image} from "react-native";
+import { Text, View, Image, StyleSheet} from "react-native";
 import { Container, Content} from "native-base";
 import { Col, Row, Grid } from "react-native-easy-grid";
 export default class Plats extends React.Component {
@@ -7,18 +7,17 @@ export default class Plats extends React.Component {
     const {pathPlats, description, price, popular, title } = this.props;
     return (
       <View>
-         <Container style={{height:170, paddingBottom:25, paddingLeft:5, paddingRight:5}}>
+         <Container style={styles.contener}>
               <Grid>
                
                <Col size={70}  >
 
-                  
                     <Row size={70}>
                         
                       <Content>
-                        <Text style={{  fontSize:18 , marginLeft:0, color:'#2E3434'}}> {title}
+                        <Text style={styles.titre}> {title}
                         </Text >
-                         <Text style={{color:'#A8A8A8',marginLeft:4}} >{description}</Text>
+                         <Text style={styles.desc} >{description}</Text>
                       </Content>
                   </Row> 
                   <Row size={30}>
@@ -28,19 +27,14 @@ export default class Plats extends React.Component {
              </Col>
 
              <Col size={30}>
-                      <Image style={{width:'100%', height:'100%',borderRadius:8}}
+                      <Image style={styles.img}
                                     source = {pathPlats}
                     
-                                    resizeMode = 'cover'>
-                    </Image>
+                                    resizeMode = 'cover'/>
+                   
                 
-            </Col>
-   
-               
+            </Col>    
           </Grid> 
-
-
-      
           </Container>
           
       
@@ -48,3 +42,25 @@ export default class Plats extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  contener: {
+    height:170,
+    paddingBottom:25,
+    paddingLeft:5,
+    paddingRight:5,
+  },
+  titre:{  
+    fontSize:18 ,
+    marginLeft:0,
+    color:'#2E3434'},
+    desc:
+    {color:'#A8A8A8',
+    marginLeft:4},
+    img:
+    {width:'100%',
+     height:'100%',
+     borderRadius:8}
+
+
+});
