@@ -1,7 +1,14 @@
 import * as React from "react";
-import { StyleSheet, View, ScrollView, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  ImageBackground,
+  TouchableOpacity,
+  Text,
+} from "react-native";
 
-export default class RestoPerCategory extends React.Component {
+export default class RestoH extends React.Component {
   constructor() {
     super();
   }
@@ -50,21 +57,27 @@ export default class RestoPerCategory extends React.Component {
       },
     ];
 
+    const { width, height, navigateToScreen } = this.props;
+
+    const pressHandler = () => navigateToScreen();
+
     return (
       <View style={styles.container}>
         <ScrollView horizontal={true}>
           {foodDesc.map((details, index) => {
             return (
               <View key={index}>
-                <ImageBackground
-                  style={{
-                    width: 250,
-                    height: 175,
-                    marginLeft: 10,
-                    borderRadius: 5,
-                    overflow: "hidden",
-                  }}
-                  source={{ uri: details.url }}></ImageBackground>
+                <TouchableOpacity onPress={pressHandler}>
+                  <ImageBackground
+                    style={{
+                      width: width,
+                      height: height,
+                      marginLeft: 10,
+                      borderRadius: 5,
+                      overflow: "hidden",
+                    }}
+                    source={{ uri: details.url }}></ImageBackground>
+                </TouchableOpacity>
               </View>
             );
           })}
