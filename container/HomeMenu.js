@@ -3,8 +3,6 @@ import {
   StyleSheet,
   View,
   ScrollView,
-  Text,
-  TouchableOpacity,
 } from "react-native";
 import { Container, Content } from "native-base";
 import Card from "../component/homeMenu/Card";
@@ -62,7 +60,7 @@ export default class HomeMenu extends React.Component {
         name: "Poke-Bowl",
       },
       {
-        source: require("../assets/images/Categories/kebab.png"),
+        source: require("../assets/images/Categories/Kebab.png"),
         name: "Kebab",
       },
       {
