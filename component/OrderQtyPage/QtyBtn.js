@@ -16,12 +16,9 @@ export default class QtyBtn extends React.Component {
             <Card style={styles.container}>
                <CardItem>
                <Body style={styles.dContainer}>   
-               
-               
-                  <Ionicons name="remove-circle-outline" size={35} color={"#00c1b2"}/>    
+                  <Ionicons name="remove-circle-outline" size={30} color={"#00c1b2"}/>    
                   <Text style={styles.text}>1</Text>
-                  <Ionicons name="add-circle-outline" size={35} color={"#00c1b2"} /> 
-                                  
+                  <Ionicons name="add-circle-outline" size={30} color={"#00c1b2"} /> 
                </Body>
                </CardItem>
             </Card>          
@@ -32,12 +29,13 @@ export default class QtyBtn extends React.Component {
 
 const styles = StyleSheet.create({
    text:{
-      fontSize: 30,
+      fontSize: 25,
       fontWeight:"bold"
       
    },
    dContainer:{
-      padding:10,
+      padding:0,
+      height:30,
       flex:1,
       flexDirection:"row",
       justifyContent: "space-around"

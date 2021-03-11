@@ -14,11 +14,13 @@ export default class OrderQtyDesc extends React.Component {
          <View>
             <Card style={styles.container}>
                <CardItem>
-               <Body style={styles.dContainer}>   
-               <View style={styles.contentRow}>
+               <Body style={styles.contentRow}>   
                   <Text style={styles.name}>{name} </Text>
                   <Text style={styles.price}>€ {price}</Text>   
-                  </View>      
+               </Body>
+               </CardItem>
+               <CardItem style={styles.desc2}> 
+               <Body>   
                   <Text style={styles.desc}>{description}</Text>                      
                </Body>
                </CardItem>
@@ -31,8 +33,8 @@ export default class OrderQtyDesc extends React.Component {
 const styles = StyleSheet.create({
    name:{
       fontSize: 16,
-      marginRight:280,
       marginBottom:10,
+      fontWeight: "bold"
       
    },
    desc:{
@@ -48,12 +50,17 @@ const styles = StyleSheet.create({
       padding:10
    },
    container:{
-      marginTop: 40,
-      
+      marginTop: 40, 
    },
    contentRow:{
-      flexDirection:"row"
-   }   
+      flex: 1,
+      flexDirection:"row",
+      justifyContent:"space-between"
+   },
+   desc2:{
+      paddingTop: 0, 
+      
+   },   
  
 
   
