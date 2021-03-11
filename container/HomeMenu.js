@@ -6,6 +6,7 @@ import { Container } from "native-base";
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
 import RestoH from "../container/RestoH";
+import { db } from "../restaurant";
 
 export default class HomeMenu extends React.Component {
   constructor() {
@@ -14,12 +15,8 @@ export default class HomeMenu extends React.Component {
   }
   render() {
     const { navigation } = this.props;
-
     const foodType = [
-      {
-        source: require("../assets/images/Categories/Discount.png"),
-        name: "Offres",
-      },
+      
       {
         source: require("../assets/images/Categories/Groceries.png"),
         name: "Epicerie",
@@ -73,9 +70,11 @@ export default class HomeMenu extends React.Component {
     return (
       <Container style={styles.container}>
         <HeaderHome
-          navigateToLogin={() =>
-            this.props.navigation.navigate("Login")
-          }
+          navigateToLogin={() => {
+            console.log(db);
+
+            this.props.navigation.navigate("Login");
+          }}
         />
         <ScrollView>
           <ScrollView horizontal={true}>
