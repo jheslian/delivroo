@@ -13,7 +13,7 @@ const db = [
       "discountedPrice" : "",
       "description" : "Viande bovine hachée origine france, tabouleh,crème d’ail. 1 Beignet au choix",
       "url": "../assets/images/resto/galetteViande.png",
-      "popular" : "popular"
+      "popular" : true
    },
    {
       "name": "Assiette variétés",
