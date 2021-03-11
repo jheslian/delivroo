@@ -3,8 +3,6 @@ import {
   StyleSheet,
   View,
   ScrollView,
-  Text,
-  TouchableOpacity,
 } from "react-native";
 import { Container, Content } from "native-base";
 import Card from "../component/homeMenu/Card";
