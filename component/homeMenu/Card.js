@@ -1,37 +1,52 @@
 import * as React from "react";
-import { Text, View, ImageBackground } from "react-native";
+import {
+  Text,
+  View,
+  ImageBackground,
+  TouchableOpacity,
+} from "react-native";
 
 export default class Card extends React.Component {
   render() {
-    const { url, name, width, height } = this.props;
+    const {
+      source,
+      name,
+      width,
+      height,
+      navigation,
+      categorie,
+    } = this.props;
+    const pressHandler = () => {
+      navigation.navigate("Login", { categorie });
+    };
     return (
       <View>
-        <ImageBackground
-          style={{
-            width: width,
-            height: height,
-            marginLeft: 10,
-            borderRadius: 5,
-            overflow: "hidden",
-            position: "relative",
-          }}
-          source={{
-            uri: url,
-          }}>
-          <Text
+        <TouchableOpacity onPress={pressHandler}>
+          <ImageBackground
             style={{
-              color: "white",
-              fontWeight: "bold",
-              textAlign: "center",
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              marginBottom: 5,
+              width: width,
+              height: height,
               marginLeft: 10,
-            }}>
-            {name}
-          </Text>
-        </ImageBackground>
+              borderRadius: 5,
+              overflow: "hidden",
+              position: "relative",
+            }}
+            source={source}>
+            <Text
+              style={{
+                color: "white",
+                fontWeight: "bold",
+                textAlign: "center",
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                marginBottom: 5,
+                marginLeft: 10,
+              }}>
+              {name}
+            </Text>
+          </ImageBackground>
+        </TouchableOpacity>
       </View>
     );
   }
