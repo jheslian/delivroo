@@ -26,6 +26,7 @@
     "react-navigation-drawer": "*",
     "react-native-screens": "^2.15.2",
     "react-native-elements": "^3.3.0",
+    "react-native-ionicons": "^4.6.5",
     "react-native-swipe-image": "^1.1.0",
     "react-native-web": "~0.13.12",
     "react-navigation": "^4.4.4",
