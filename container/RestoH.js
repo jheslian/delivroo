@@ -1,7 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View, ScrollView, Text } from "react-native";
-import RestoCatDesc from "../component/restoCategory/RestoCatDesc";
-import RestoCatImage from "../component/restoCategory/RestoCatImage";
+import { StyleSheet, View, ScrollView, ImageBackground } from "react-native";
 
 export default class RestoPerCategory extends React.Component {
   constructor() {
@@ -54,19 +52,19 @@ export default class RestoPerCategory extends React.Component {
 
     return (
       <View style={styles.container}>
-        <ScrollView >
+        <ScrollView horizontal={true}>
           {foodDesc.map((details, index) => {
             return (
               <View key={index}>
-                <RestoCatImage url={details.url} />
-                  <RestoCatDesc
-                    name={details.name}
-                    fee={details.fee}
-                    description={details.description}
-                    distance={details.distance}
-                    promo={details.promo}
-                    others={details.others}
-                  />
+                <ImageBackground
+                  style={{
+                    width: 250,
+                    height: 175,
+                    marginLeft: 10,
+                    borderRadius: 5,
+                    overflow: "hidden",
+                  }}
+                  source={{ uri: details.url }}></ImageBackground>
               </View>
             );
           })}

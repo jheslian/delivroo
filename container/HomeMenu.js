@@ -1,14 +1,12 @@
 import * as React from "react";
-import {
-  StyleSheet,
-  View,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import { Container, Content } from "native-base";
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
-import SecondCarousel from "../component/homeMenu/SecondCarousel";
+
 import ThirdCarousel from "../component/homeMenu/ThirdCarousel";
+
+import RestoH from "../container/RestoH";
 
 export default class HomeMenu extends React.Component {
   constructor() {
@@ -60,7 +58,7 @@ export default class HomeMenu extends React.Component {
         name: "Poke-Bowl",
       },
       {
-        source: require("../assets/images/Categories/kebab.png"),
+        source: require("../assets/images/Categories/Kebab.png"),
         name: "Kebab",
       },
       {
@@ -83,6 +81,7 @@ export default class HomeMenu extends React.Component {
                 return (
                   <View key={index}>
                     <Card
+                      horizontale={false}
                       categorie={this.state.categorie}
                       navigation={navigation}
                       name={photo.name}
@@ -94,12 +93,20 @@ export default class HomeMenu extends React.Component {
                 );
               })}
             </ScrollView>
-            <ScrollView horizontal={true}>
-              <SecondCarousel />
+            <ScrollView>
+              <RestoH />
             </ScrollView>
             <ScrollView>
-              <ThirdCarousel />
-              <ThirdCarousel />
+              <RestoH />
+            </ScrollView>
+            <ScrollView>
+              <RestoH />
+            </ScrollView>
+            <ScrollView>
+              <RestoH />
+            </ScrollView>
+            <ScrollView>
+              <RestoH />
             </ScrollView>
           </Content>
         </ScrollView>

@@ -17,7 +17,7 @@ export default class Card extends React.Component {
       categorie,
     } = this.props;
     const pressHandler = () => {
-      navigation.navigate("Login", { categorie });
+      navigation.navigate("Restaurant");
     };
     return (
       <View>

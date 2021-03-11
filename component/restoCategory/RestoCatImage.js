@@ -17,12 +17,12 @@ export default class RestoCatImage extends React.Component {
               />
           </CardItem>
         </Card>
-        <TouchableHighlight style = {styles.promo}>
+        {/* <TouchableHighlight style = {styles.promo}>
           <Text style={styles.promoTxt}> 15 % {'\n'} off</Text>
         </TouchableHighlight>
         <TouchableHighlight style = {styles.dTime}>
           <Text style={styles.dTxt}> 10 - 15{'\n'}    min</Text>
-        </TouchableHighlight>
+        </TouchableHighlight> */}
       </View>
     );
   }
@@ -30,7 +30,7 @@ export default class RestoCatImage extends React.Component {
 
 const styles = StyleSheet.create({ 
    container: {
-      marginTop: 40,
+      marginTop: 20,
     
     }, 
     cover: {
@@ -43,10 +43,10 @@ const styles = StyleSheet.create({
     promo:{
       borderRadius: 50,
         width: 60,
-        height: 60,
+        height: 0,
         backgroundColor:'#ff3300',
         position: "absolute",
-        top: 0,
+        top: -65,
         left: 0,
         margin:15,
         borderColor: "yellow",

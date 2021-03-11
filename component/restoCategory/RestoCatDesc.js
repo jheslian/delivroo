@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
    container:{
       paddingRight:20,
       paddingBottom:10,
-      marginTop:30,
+      marginTop:4,
    },
    promo:{
       
