@@ -2,7 +2,9 @@ import * as React from "react";
 import {
   StyleSheet,
   Button,
-  View
+  Text,
+  View,
+  TouchableHighlight
 } from "react-native";
 import OrderQtyImage from "../component/OrderQtyPage/OrderQtyImage";
 import OrderQtyDesc from "../component/OrderQtyPage/OrderQtyDesc";
@@ -26,19 +28,21 @@ export default function OrderQty() {
          <OrderQtyImage url={foodDesc.url} />
          <OrderQtyDesc name={foodDesc.name} price={foodDesc.price} description={foodDesc.description} />
          <QtyBtn/>
-         <Button style={styles.icon} title="Add item" color="#00c1b2"/>
-             
+         
+         
+         <TouchableHighlight  style= {{width: null,
+        height: 60, backgroundColor: "#00c1b2", marginTop:30,
+  }}>
+           <Text style={{textAlign:"center", paddingTop:15, color: "white", fontSize:20, }}>Add item</Text>
+         </TouchableHighlight>
       </View>
-
-    
   );
 }
 
 const styles = StyleSheet.create({
    container:{
       flexDirection: 'column',
-      flex: 1
-      
+      flex: 1,
    },
    icon:{
       marginTop:50,
