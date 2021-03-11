@@ -16,7 +16,7 @@ export default function RestoPerCategory() {
         "https://static.lexpress.fr/medias_12020/w_2048,h_1146,c_crop,x_0,y_154/w_2000,h_1125,c_fill,g_north/v1550742170/sushi-saumon-maki-saumon-japonais_6154396.jpg",
       name: "TAC C'OS" ,
       description: "3.5 Good (300) ",
-      others: ". Mexican Salad . Pass Sodexo",
+      others: ". Mexican . Salad ",
       distance: "4.6 km away",
       fee: "2.50 delivery",
       promo: "Spend €20, get 10% off"

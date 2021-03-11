@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Text, View, ImageBackground, StyleSheet, Image, TouchableHighlight } from "react-native";
+import { Button, Text, View, ImageBackground, StyleSheet, Image, TouchableHighlight, TouchableNativeFeedback } from "react-native";
 import { Card,Body, CardItem, Right } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -10,7 +10,7 @@ export default class RestoCatImage extends React.Component {
       <View style={styles.container}>
         <Card>
           <CardItem cardBody>
-            <Image
+            <ImageBackground
                 resizeMode="cover"
                 style={styles.cover}
                 source={{ uri: url}}
@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     cover: {
       flex: 1,  
       height: 200,
-      width:null
+      width:null,
+      
     },  
     
     promo:{
@@ -50,7 +51,8 @@ const styles = StyleSheet.create({
         margin:15,
         borderColor: "yellow",
         borderWidth:1,
-        transform: [{ rotate: '-30deg'}] 
+        transform: [{ rotate: '-30deg'}],
+        overflow:"visible"
     },
     promoTxt:{
       color: "white",

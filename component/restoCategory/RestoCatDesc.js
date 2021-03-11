@@ -52,9 +52,6 @@ const styles = StyleSheet.create({
    name:{
       fontSize: 16,
       fontWeight: "bold"
-      //marginRight:250,
-     
-      
    },
    desc:{
       fontSize: 16,
@@ -63,32 +60,24 @@ const styles = StyleSheet.create({
    price:{
       fontSize: 16,
       color: "gray",
-      
    },
    dContainer:{     
       flex:1,
       flexDirection:"row",
-      
    },
    d2Container:{ 
       flex:1,
       flexDirection:"row",
-      
-
    },
    container:{
       paddingRight:20,
       paddingBottom:10,
       marginTop:30,
-      
-      
-      
    },
    promo:{
       
       fontSize: 16,
       color:"#ff3300"
-      
    },
    cItem:{
       paddingTop: 2, 
@@ -97,7 +86,4 @@ const styles = StyleSheet.create({
    star:{
       paddingRight:5
    }   
- 
-
-  
 });
