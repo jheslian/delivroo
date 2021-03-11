@@ -10,11 +10,13 @@ import {
     Body
 } from "native-base";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { ceil } from "react-native-reanimated";
 export default function AddressForm() {
 
     return (
-        <Container style={styles.container}>
-            <Header>
+        <Container style={styles.container,{backgroundColor:"white"}}>
+            <Header style={{backgroundColor:"white"}}>
                 <Left>
                     <Button
                         type="clear"
@@ -28,10 +30,10 @@ export default function AddressForm() {
                     />
                 </Left>
                 <Body>
-                    <Text>Confirmer adresse</Text>
+                    <Text style={{fontWeight:"bold", fontSize:16}}>Confirmer adresse</Text>
                 </Body>
             </Header>
-            <Content>
+            <Content style={styles.content}>
                 <Input
                     placeholder='Nom'
                 />
@@ -44,29 +46,38 @@ export default function AddressForm() {
                 <Input
                     placeholder='Code postal'
                 />
-                <Input
+                <Input style={{marginBottom:0}}
                     placeholder='Numéro de téléphone'
                 />
+                <Text style={{marginLeft:10,marginBottom:10}}>
+                    Nous ne vous contacterons uniquement en cas de problème avec votre commande.
+                </Text>
                 <Input
                     placeholder='Avez-vous des instructions pour votre coursier ?'
                 />
+            <TouchableOpacity style={styles.button}>
+                <Text style={{fontWeight:"bold", fontSize:16, marginTop:15, marginBottom:15, color:"white", alignSelf:"center"}}>Enregistrer adresse</Text>
+            </TouchableOpacity>
             </Content>
-            <Footer>
-                <Button style={styles.button} title="Enregistrer adresse"/>
-            </Footer>
         </Container>
     );
 }
 
 const styles = StyleSheet.create({
     content: {
-        paddingTop: 20,
+        paddingTop: 30,
     },
     container: {
         backgroundColor: "white",
         color:"black",
     },
     button: {
-        color: "#00c1b2"
+        width:300,
+        borderRadius:4,
+        flex:1,
+        justifyContent:"center",
+        alignSelf:"center",
+        alignContent:"center",
+        backgroundColor: "#00c1b2",
     }
 });
