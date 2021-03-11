@@ -3,8 +3,9 @@ import {
   Text,
   View,
   ScrollView,
+  StyleSheet
 } from "react-native";
-import { Container } from "native-base";
+import { Container, Content, ListItem, List } from "native-base";
 
 import Plats from "../component/homeMenu/Plats";
 import { Row, Grid } from "react-native-easy-grid";
@@ -12,8 +13,7 @@ import { Row, Grid } from "react-native-easy-grid";
 export default function ShowRestaurants() {
   const ListPlat = [
       {
-        url:
-          "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
+        url:require('../assets/images/imgPlats/tikka.png'),
         description: "Poulet mariné au curry, servi avec frites et boisson au choix  ",
         price : '7,90€',
         popular :'Populaire',
@@ -21,7 +21,7 @@ export default function ShowRestaurants() {
       },
       {
         url:
-          "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
+          require('../assets/images/imgPlats/thai.png'),
           description: "Poulet mariné aux épices thaî, servi avec frites et boisson au choix",
           price : '7,90€',
           popular :'Populaire',
@@ -29,7 +29,7 @@ export default function ShowRestaurants() {
       },
       {
         url:
-          "https://i.pinimg.com/236x/c6/6b/11/c66b111bf4df809e87a1208f75d2788b.jpg",
+          require('../assets/images/imgPlats/thndori.png'),
           description: " Poulet mariné, saveur d'Inde, servi avec frites et boisson aux choix",
           price : '7,90€',
           popular :'',
@@ -37,7 +37,14 @@ export default function ShowRestaurants() {
       },
       {
         url:
-          "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
+          require('../assets/images/imgPlats/steak.png'),
+          description: "Poulet mariné, saveur d'Inde, servi avec frites et boisson aux choix",
+          price : '10€',
+          popular :'Populaire',
+          title: 'Menu sandwich steak', 
+      },
+      {
+        url:require('../assets/images/imgPlats/double.png'),
           description: "Poulet mariné, saveur d'Inde, servi avec frites et boisson aux choix",
           price : '10€',
           popular :'Populaire',
@@ -45,15 +52,7 @@ export default function ShowRestaurants() {
       },
       {
         url:
-          "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
-          description: "Poulet mariné, saveur d'Inde, servi avec frites et boisson aux choix",
-          price : '10€',
-          popular :'Populaire',
-          title: 'Menu sandwich steak', 
-      },
-      {
-        url:
-          "https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100",
+          require('../assets/images/imgPlats/tikka.png'),
           description: "Poulet mariné, saveur d'Inde, servi avec frites et boisson aux choix",
           price : '10€',
           popular :'Populaire',
@@ -65,14 +64,30 @@ export default function ShowRestaurants() {
   return (
     <Container style={{marginTop:100}} >
       <Grid>
-        <Row size ={15} >
-            <Text> Bonjour </Text>
-            <Text > Bonjour </Text>
+        <Row size ={10} >
          
+
+              <Content>
+                <List>
+                      <ListItem>
+                      <Text style={{color:'#A9A9A9'}}>  
+                           <Text style={styles.header}>
+                             Menus sandwichs 🥙 🍟 🥤 </Text>
+                        
+                            {"\n"}
+                            {"\n"}                        
+                           Sandwich au choix, frites et boisson</Text>
+
+                      </ListItem> 
+                </List>
+  
+              
+              </Content>
+            
         </Row >
 
-         <Row size={85} style={{marginBottom:30}}>
-         <Container style={{borderBottom: 'solid', borderBottomColor:'red'}}>
+         <Row size={85}>
+         <Container >
           <ScrollView vertical={true}>
             {ListPlat.map(menu => {
                   return (
@@ -80,10 +95,11 @@ export default function ShowRestaurants() {
                     <View>
                     <Plats 
                         description={menu.description}
-                        url={menu.url}
+                        pathPlats={menu.url}
                         price={menu.price}
                         popular={menu.popular}
                         title={menu.title}
+                        
                       
                     />
 
@@ -103,3 +119,11 @@ export default function ShowRestaurants() {
   );
 }
 
+const styles = StyleSheet.create({
+  header: {
+    fontSize : 18,
+     color:'#2E3434',
+      fontWeight:'bold'
+  },
+
+});
