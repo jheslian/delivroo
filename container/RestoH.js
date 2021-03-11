@@ -1,9 +1,13 @@
 import * as React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
-import RestoCatDesc from "../component/restoCategory/RestoCatDesc";
-import RestoCatImage from "../component/restoCategory/RestoCatImage";
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  ImageBackground,
+  TouchableOpacity,
+} from "react-native";
 
-export default class RestoPerCategory extends React.Component {
+export default class RestoH extends React.Component {
   constructor() {
     super();
   }
@@ -52,21 +56,27 @@ export default class RestoPerCategory extends React.Component {
       },
     ];
 
+    const { width, height, navigateToScreen } = this.props;
+
+    const pressHandler = () => navigateToScreen();
+
     return (
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView horizontal={true}>
           {foodDesc.map((details, index) => {
             return (
               <View key={index}>
-                <RestoCatImage url={details.url} />
-                <RestoCatDesc
-                  name={details.name}
-                  fee={details.fee}
-                  description={details.description}
-                  distance={details.distance}
-                  promo={details.promo}
-                  others={details.others}
-                />
+                <TouchableOpacity onPress={pressHandler}>
+                  <ImageBackground
+                    style={{
+                      width: width,
+                      height: height,
+                      marginLeft: 10,
+                      borderRadius: 5,
+                      overflow: "hidden",
+                    }}
+                    source={{ uri: details.url }}></ImageBackground>
+                </TouchableOpacity>
               </View>
             );
           })}

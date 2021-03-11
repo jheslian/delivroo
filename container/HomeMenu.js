@@ -1,14 +1,11 @@
 import * as React from "react";
-import {
-  StyleSheet,
-  View,
-  ScrollView,
-} from "react-native";
-import { Container, Content } from "native-base";
+
+import { StyleSheet, View, ScrollView, Text } from "react-native";
+import { Container } from "native-base";
+
 import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
-import SecondCarousel from "../component/homeMenu/SecondCarousel";
-import ThirdCarousel from "../component/homeMenu/ThirdCarousel";
+import RestoH from "../container/RestoH";
 
 export default class HomeMenu extends React.Component {
   constructor() {
@@ -60,7 +57,7 @@ export default class HomeMenu extends React.Component {
         name: "Poke-Bowl",
       },
       {
-        source: require("../assets/images/Categories/kebab.png"),
+        source: require("../assets/images/Categories/Kebab.png"),
         name: "Kebab",
       },
       {
@@ -75,33 +72,59 @@ export default class HomeMenu extends React.Component {
 
     return (
       <Container style={styles.container}>
-        <HeaderHome />
+        <HeaderHome
+          navigateToLogin={() =>
+            this.props.navigation.navigate("Login")
+          }
+        />
         <ScrollView>
-          <Content>
-            <ScrollView horizontal={true}>
-              {foodType.map((photo, index) => {
-                return (
-                  <View key={index}>
-                    <Card
-                      categorie={this.state.categorie}
-                      navigation={navigation}
-                      name={photo.name}
-                      source={photo.source}
-                      width={85}
-                      height={85}
-                    />
-                  </View>
-                );
-              })}
-            </ScrollView>
-            <ScrollView horizontal={true}>
-              <SecondCarousel />
-            </ScrollView>
-            <ScrollView>
-              <ThirdCarousel />
-              <ThirdCarousel />
-            </ScrollView>
-          </Content>
+          <ScrollView horizontal={true}>
+            {foodType.map((photo, index) => {
+              return (
+                <View key={index}>
+                  <Card
+                    horizontale={false}
+                    categorie={this.state.categorie}
+                    navigation={navigation}
+                    name={photo.name}
+                    source={photo.source}
+                    width={85}
+                    height={85}
+                  />
+                </View>
+              );
+            })}
+          </ScrollView>
+          <ScrollView>
+            <Text>A la une</Text>
+            <RestoH
+              height={150}
+              width={320}
+              navigateToScreen={() =>
+                navigation.navigate("OneRestaurant")
+              }
+            />
+          </ScrollView>
+          <ScrollView>
+            <Text>Livraison la plus rapide</Text>
+            <RestoH
+              height={175}
+              width={300}
+              navigateToScreen={() =>
+                navigation.navigate("OneRestaurant")
+              }
+            />
+          </ScrollView>
+          <ScrollView>
+            <Text>Meilleures notes</Text>
+            <RestoH
+              height={200}
+              width={350}
+              navigateToScreen={() =>
+                navigation.navigate("OneRestaurant")
+              }
+            />
+          </ScrollView>
         </ScrollView>
       </Container>
     );
@@ -109,7 +132,7 @@ export default class HomeMenu extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: { marginTop: 45 },
+  container: { marginTop: 0 },
   logo: {
     width: 32,
     height: 32,

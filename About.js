@@ -1,14 +1,12 @@
 import * as React from "react";
-import { StyleSheet, Text, Touchable, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Button } from "react-native-elements";
 import {
     Container,
     Header,
     Content,
-    Footer,
     Left,
     Body,
-    Row
 } from "native-base";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { Ionicons } from "@expo/vector-icons";
@@ -31,7 +29,7 @@ export default function About() {
                     />
                 </Left>
                 <Body>
-                    <Text>À propos de notre application</Text>
+                    <Text style={{fontWeight:"bold", fontSize:16}}>À propos de notre application</Text>
                 </Body>
             </Header>
             <Content style={styles.main}>
