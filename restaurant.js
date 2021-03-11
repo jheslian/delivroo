@@ -1,4 +1,4 @@
-const db = [
+export const db = [
   {
     restaurantName: "Wow Galette",
     description:
@@ -21,7 +21,7 @@ const db = [
         name: "Assiette variétés",
         price: 9.0,
         description: "1 brochette + 1 pain libanais.",
-        url: require("./assets/images/restos/galetteViande.png"),
+        url: require("./assets/images/restos/asVar.png"),
         popular: false,
       },
       {

@@ -31,14 +31,13 @@ export default class RestoCatDesc extends React.Component {
                 color="#4DA4B5"
               />
               <Text style={styles.desc}>{description}</Text>
-              <Text style={styles.desc}>{others}</Text>
             </Body>
           </CardItem>
 
           <CardItem style={styles.cItem}>
             <Body style={styles.d2Container}>
-              <Text style={styles.desc}>{distance} . </Text>
-              <Text style={styles.price}>€{fee}</Text>
+              <Text style={styles.desc}>{distance} km - </Text>
+              <Text style={styles.price}>€ {fee}</Text>
             </Body>
           </CardItem>
 

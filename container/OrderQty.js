@@ -11,6 +11,10 @@ import QtyBtn from "../component/OrderQtyPage/QtyBtn";
 
 export default class OrderQty extends React.Component {
   render() {
+    const price = this.props.navigation.getParam("price");
+    const description = this.props.navigation.getParam("description");
+    const name = this.props.navigation.getParam("name");
+    const url = this.props.navigation.getParam("url");
     const foodDesc = {
       url:
         "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
@@ -22,11 +26,11 @@ export default class OrderQty extends React.Component {
 
     return (
       <View style={styles.container}>
-        <OrderQtyImage url={foodDesc.url} />
+        <OrderQtyImage url={url} />
         <OrderQtyDesc
-          name={foodDesc.name}
-          price={foodDesc.price}
-          description={foodDesc.description}
+          name={name}
+          price={price}
+          description={description}
         />
         <QtyBtn />
 

@@ -59,30 +59,23 @@ export default class ShowRestaurants extends React.Component {
     ];
 
     const { navigation } = this.props;
+    const dish = this.props.navigation.getParam("dish");
+
     return (
       <Container style={{ marginTop: 100 }}>
         <Grid>
           <Row size={10}>
             <Content>
-              <List>
-                <ListItem>
-                  <Text style={{ color: "#A9A9A9" }}>
-                    <Text style={styles.header}>
-                      Menus sandwichs 🥙 🍟 🥤{" "}
-                    </Text>
-                    {"\n"}
-                    {"\n"}
-                    Sandwich au choix, frites et boisson
-                  </Text>
-                </ListItem>
-              </List>
+              <Text style={{ color: "#A9A9A9" }}>
+                Plats
+              </Text>
             </Content>
           </Row>
 
           <Row size={85}>
             <Container>
               <ScrollView vertical={true}>
-                {ListPlat.map((menu, index) => {
+                {dish.map((menu, index) => {
                   return (
                     <View key={index}>
                       <Plats
@@ -91,7 +84,7 @@ export default class ShowRestaurants extends React.Component {
                         pathPlats={menu.url}
                         price={menu.price}
                         popular={menu.popular}
-                        title={menu.title}
+                        title={menu.name}
                       />
                     </View>
                   );

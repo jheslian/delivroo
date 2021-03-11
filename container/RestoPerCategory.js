@@ -1,5 +1,10 @@
 import * as React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import RestoCatDesc from "../component/restoCategory/RestoCatDesc";
 import RestoCatImage from "../component/restoCategory/RestoCatImage";
 
@@ -9,6 +14,8 @@ export default class RestoPerCategory extends React.Component {
   }
 
   render() {
+    const { navigation } = this.props;
+    const shopList = this.props.navigation.getParam("shopList");
     const foodDesc = [
       {
         url:
@@ -51,22 +58,29 @@ export default class RestoPerCategory extends React.Component {
         promo: "Spend €20, get 10% off",
       },
     ];
+    let dish = {};
+    const pressHandler = () => {
+      navigation.navigate("OneRestaurant", { dish });
+    };
 
     return (
       <View style={styles.container}>
         <ScrollView>
-          {foodDesc.map((details, index) => {
+          {shopList.map((shop, index) => {
+            dish = shop.listsDish;
             return (
               <View key={index}>
-                <RestoCatImage url={details.url} />
-                <RestoCatDesc
-                  name={details.name}
-                  fee={details.fee}
-                  description={details.description}
-                  distance={details.distance}
-                  promo={details.promo}
-                  others={details.others}
-                />
+                <TouchableOpacity onPress={pressHandler}>
+                  <RestoCatImage url={shop.listsDish[0].url} />
+                  <RestoCatDesc
+                    name={shop.restaurantName}
+                    fee={shop.fee}
+                    description={shop.description}
+                    distance={shop.distance}
+                    promo={shop.promo}
+                    others={shop.others}
+                  />
+                </TouchableOpacity>
               </View>
             );
           })}
