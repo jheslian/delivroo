@@ -4,9 +4,11 @@ import {
   View,
   ScrollView,
   ImageBackground,
+  TouchableOpacity,
+  Text,
 } from "react-native";
 
-export default class RestoPerCategory extends React.Component {
+export default class RestoH extends React.Component {
   constructor() {
     super();
   }
@@ -55,7 +57,9 @@ export default class RestoPerCategory extends React.Component {
       },
     ];
 
-    const { width,height } = this.props;
+    const { width, height, navigateToScreen } = this.props;
+
+    const pressHandler = () => navigateToScreen();
 
     return (
       <View style={styles.container}>
@@ -63,15 +67,17 @@ export default class RestoPerCategory extends React.Component {
           {foodDesc.map((details, index) => {
             return (
               <View key={index}>
-                <ImageBackground
-                  style={{
-                    width: width,
-                    height: height,
-                    marginLeft: 10,
-                    borderRadius: 5,
-                    overflow: "hidden",
-                  }}
-                  source={{ uri: details.url }}></ImageBackground>
+                <TouchableOpacity onPress={pressHandler}>
+                  <ImageBackground
+                    style={{
+                      width: width,
+                      height: height,
+                      marginLeft: 10,
+                      borderRadius: 5,
+                      overflow: "hidden",
+                    }}
+                    source={{ uri: details.url }}></ImageBackground>
+                </TouchableOpacity>
               </View>
             );
           })}

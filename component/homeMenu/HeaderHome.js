@@ -6,34 +6,44 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import { Header, Left, Right, Body } from "native-base";
 
 export default class HeaderHome extends React.Component {
   constructor() {
     super();
     this.state = { categorie: "All" };
   }
+
+  goLogin = () => {
+    const { navigateToLogin } = this.props;
+    console.log("triggered");
+    navigateToLogin();
+  };
+
   render() {
-    const { navigation } = this.props;
-    const goLogin = () => {
-      navigation.navigate("Login");
-    };
     return (
-      <View style={styles.displayH}>
-        <Image
-          style={styles.image}
-          source={require("../../assets/images/images.jpeg")}
-        />
-        <View style={styles.displayV}>
-          <Text style={styles.now}> Now</Text>
-          <Text style={styles.location}> Location</Text>
-        </View>
-        <TouchableOpacity onPress={goLogin}>
+      <Header>
+        <Left>
           <Image
-            source={require("../../assets/images/user_icon.png")}
             style={styles.image}
+            source={require("../../assets/images/images.jpeg")}
           />
-        </TouchableOpacity>
-      </View>
+        </Left>
+        <Body>
+          <View style={styles.displayV}>
+            <Text style={styles.now}> Now</Text>
+            <Text style={styles.location}> Location</Text>
+          </View>
+        </Body>
+        <Right>
+          <TouchableOpacity onPress={this.goLogin}>
+            <Image
+              source={require("../../assets/images/user_icon.png")}
+              style={styles.image}
+            />
+          </TouchableOpacity>
+        </Right>
+      </Header>
     );
   }
 }
@@ -49,14 +59,13 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     alignItems: "center",
     marginBottom: 20,
-    marginTop: -25,
+    marginTop: 40,
   },
   displayV: {
     flexDirection: "column",
-    marginLeft: -200,
   },
   now: {
     color: "#abadac",
