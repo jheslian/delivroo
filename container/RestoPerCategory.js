@@ -13,7 +13,7 @@ export default function RestoPerCategory() {
   const foodDesc = 
     {
       url:
-        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
+        "https://static.lexpress.fr/medias_12020/w_2048,h_1146,c_crop,x_0,y_154/w_2000,h_1125,c_fill,g_north/v1550742170/sushi-saumon-maki-saumon-japonais_6154396.jpg",
       name: "TAC C'OS" ,
       description: "3.5 Good (300) ",
       others: ". Mexican Salad . Pass Sodexo",
@@ -37,7 +37,9 @@ export default function RestoPerCategory() {
 const styles = StyleSheet.create({
    container:{
       flexDirection: 'column',
-      flex: 1
+      flex: 1,
+      padding: 10
+      
       
    },
   //  icon:{

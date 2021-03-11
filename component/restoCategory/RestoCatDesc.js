@@ -77,9 +77,11 @@ const styles = StyleSheet.create({
 
    },
    container:{
-      padding:10,
-      marginTop:40,
-      paddingBottom:20
+      paddingRight:20,
+      paddingBottom:10,
+      marginTop:30,
+      
+      
       
    },
    promo:{
