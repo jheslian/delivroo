@@ -124,7 +124,7 @@ export const db = [
       "les meilleurs burgers du meilleur restaurant américain",
     promo: "Spend €35, get 15% off",
     distance: 4.08,
-    fee: 0,
+    fee: "0 delivery",
     note: 4.4,
     category: "Sandwich",
 
@@ -162,7 +162,7 @@ export const db = [
       "Le menu Fête à Crêpe vous propose des crêpes décalées, bien loin de la sempiternelle galette bretonne.",
     promo: "Spend €15, get 10% off",
     distance: 0.45,
-    fee: 0,
+    fee: "0 delivery",
     note: 4.4,
     category: "Dessert",
 
@@ -191,8 +191,8 @@ export const db = [
       "Venez découvrir nos poulets rôtis, notre riz thaï, nos frites cuites façons belges ainsi que nos délicieuses bananes plantins.",
     distance: 1.99,
     promo: "",
-    fee: 0.45,
-    note: 0,
+    fee: "0.45 delivery",
+    note: 2.1,
     category: "Dessert",
 
     listsDish: [
@@ -241,209 +241,208 @@ export const db = [
   {
       restaurantName : "Poke me 17e",
       description:"Les meilleurs poke bowl de Paris",
-      promo:"",
-      promotion: "",
-      distance: "2 km away",
-      fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
-      category: "PokeBowl",
+      promo:"Spend €15, get 5% off",
+      distance: 2.3,
+      fee: "3.99 delivery",
+      note: 3.9,
+      category: "Poke-Bowl",
       listsDish : [ {
          name: "POKE BOWL DU CHEF",
          price: 11.90,
          description: "Saumon, marinade, oignons, cornichons, ... merci de voire la photo pour le reste",
          url:require("./assets/images/restos/pokeme17e-chef.jpg"),
-         popular : "popular"
+         popular : false
       },
       {
          name:"POKE BOWL DAURADE",
          price: 11.90,
          description:"Daurade, tomate, radis, grenade, gingembre...",
          url:require("./assets/images/restos/pokeme17e-daurade.jpg"),
-         popular : "",
+         popular : true,
       }]
    },
    {
       restaurantName : "Dirty vegan burgers",
       description:"Des burgers à en faire rougir les carnivores!" ,
       promo:"",
-      distance: "2 km away",
-      fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
+      distance: 2.5,
+      fee: "2.99 delivery",
+      note: 4.8,
       category: "Burger",
       listsDish : [ {
          name:"The OAB",
          price:11.50,
          description:"L'original burger dans toute sa splendeur",
          url:require("./assets/images/restos/dirtyveganburgers-OAB.jpg"),
-         popular : "popular"
+         popular : true
       },
       {
          name:"The CSB",
          price: 12.50,
          description:"Chick'n Slaw Burger",
          url:require("./assets/images/restos/dirtyveganburgers-CSB.jpg"),
-         popular : "popular"
+         popular : true
       }]
    },
    {
       restaurantName : "O'Nan Kebab",
       description: "Un kebab dans un pain nan? Pourquoi personne n'y a pensé avant?",
       promo:"",
-      distance: "2 km away",
+      distance: 2.6,
       fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
+      note: 4.0,
       category: "Kebab",
       listsDish : [ {
          name:"Cheese nan poulet",
          price:7,
          description:"Cheese nan au poulet",
          url:require("./assets/images/restos/onankebab-cheesenanpoulet.jpg"),
-         popular : ""
+         popular : false
       },
       {
          name:"Cheese nan kebab",
          price:7,
          description:"Cheese nan au kebab",
          url:require("./assets/images/restos/onankebab-cheesenankebab.jpg"),
-         popular : "popular"
+         popular : true
       }]
    },
    {
       restaurantName : "Il grano",
       description: "Des pizzas meilleures qu'en Italie",
-      promo:"",
-      distance: "2 km away",
+      promo:"Spend €10, get 35% off",
+      distance: 1.3,
       fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
+      note: 3.9,
       category: "Pizza",
       listsDish : [ {
          name:"Margherita champignons",
          price:12.99,
          description:"Sauce tomate, mozza, basilic et champis de Paris",
          url:require("./assets/images/restos/ilgrano-margherita.jpg"),
-         popular : "popular"
+         popular : true
       },
       {
          name:"Romolo margherita",
          price:13.49,
          description:"Sauce tomate, mozza, basilic et cannabis",
          url:require("./assets/images/restos/ilgrano-romolo.jpg"),
-         popular : ""
+         popular : false
       }]
   },
   {
       restaurantName : "Yoshi",
       description: "Voyagez sans bouger avec nos petits plats!",
       promo:"",
-      distance: "2 km away",
-      fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
+      distance: 3.2,
+      fee: "4.00 delivery",
+      note: 4.6,
       category: "Sushi",
       listsDish : [ {
          name:"Saumon",
          price:12.80,
          description:"12 pièces",
          url:require("./assets/images/restos/yoshi-saumon.jpg"),
-         popular : ""
+         popular : false
       },
       {
          name:"Brochettes boeuf fromage",
          price:15,
          description:"12 pièces",
          url:require("./assets/images/restos/yoshi-brochettes.jpg"),
-         popular : "popular"
+         popular : true
       }]
   },
   {
       restaurantName : "O'Tacos",
       description: "Venez découvrir nos recettes exclusives",
-      promo:"",
-      distance: "2 km away",
-      fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
+      promo:"Spend €15, get 15% off",
+      distance: 4.3,
+      fee: "2.50 delivery",
+      note: 4.3,
       category: "Tacos",
       listsDish : [ {
          name:"So'Raclette M",
          price:8,
          description:"Viande haché, Balls raclette, sauce sweet onions gatiné raclette",
          url:require("./assets/images/restos/otacos-raclette.jpg"),
-         popular : "popular"
+         popular : true
       },
       {
          name:"Le végé 2.0",
          price:7,
          description:"Champignons, poivronnade, gratiné de cheddar",
          url:require("./assets/images/restos/otacos-vege.jpg"),
-         popular : ""
+         popular : false
       }]
   },
   {
       restaurantName : "Ky-Ten by Cookâme",
       description: "Des recettes à couper le souffle",
-      promo:"",
-      distance: "2 km away",
+      promo:"Spend €20, get 35% off",
+      distance: 5.1,
       fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
-      category: "Vietnamese",
+      note: 4.6,
+      category: "Viet",
       listsDish : [ {
          name:"Bo Bun Duo",
          price:8,
          description:"Nems, oignons, crudités, menthe et coriandre,vermicelles et cacahuètes",
          url:require("./assets/images/restos/kyten-bobunduo.jpg"),
-         popular : "popular"
+         popular : true
       },
       {
          name:"Banh Mi",
          price:7,
          description:"Recette street food spicy mayo, poulet sauté, crudités, concombre, coriandre, oignons",
          url:require("./assets/images/restos/kyten-banhmi.jpg"),
-         popular : "popular"
+         popular : true
       }]
   },
   {
       restaurantName : "La maison du p'tit déj",
       description: "Tout ce qu'il faut pour bien commencer la journée",
       promo:"",
-      distance: "2 km away",
-      fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
-      category: "Breakfast",
+      distance: 2.8,
+      fee: "1.99 delivery",
+      note: 3.2,
+      category: "Petit-dej",
       listsDish : [ {
          name:"Assortiement de viennoiseries",
          price:9,
          description:"3 chocolatines (je vois déjà les pro pains au chocolat s'énerver) et 3 croissants",
          url:require("./assets/images/restos/lamaisonduptitdej-viennoiseries.jpg"),
-         popular : ""
+         popular : false
       },
       {
          name:"Pancakes",
          price:7,
          description:"Pancakes au sirop d'érable",
          url:require("./assets/images/restos/lamaisonduptitdej-pancakes.jpeg"),
-         popular : "popular"
+         popular : true
       }]
   },
   {
       restaurantName : "Ferme ton bagel",
       description: "Des sandwichs de qualité avec un trou dedans",
       promo:"",
-      distance: "3 km away",
+      distance: 6.3,
       fee: "0.99 delivery",
-      note: "5.0 Very Good (600) ",
+      note: 4.9,
       category: "Bagels",
       listsDish : [ {
          name:"Bagel oeuf crudités",
          price:9,
          description:"Un bagel avec un oeuf et des crudités",
          url:require("./assets/images/restos/fermetonbagel-oeufcrudites.jpg"),
-         popular : "popular"
+         popular : true
       },
       {
          name:"Bagel poulet aubergines",
          price:7,
          description:"Bagel avec poulet au curry, aubergines grillées et coulis de miel",
          url:require("./assets/images/restos/fermetonbagel-pouletaubergines.jpeg"),
-         popular : "popular"
+         popular : true
       }]
   },
    {
@@ -457,7 +456,7 @@ export const db = [
       listsDish : [ {
             name : "Heineken",
             price : 37.00,
-            description : "Viande bovine hachée origine france, tabouleh,crème d’ail. 1 Beignet au choix",
+            description : "Pack de 24 bières",
             url: require("./assets/images/restos/hen.png"),
             popular : true
          },
@@ -481,7 +480,7 @@ export const db = [
       description:'À La Fabrique du Sushi, votre restaurant japonais, goûtez à de nombreuses préparations minutes, faites maison, réalisées avec amour, soin et attention',
       promo: "Spend €20, get 20% off",
       distance: 1.48,
-      fee: 3 ,
+      fee: "3.0 delivery" ,
       note: 4.4 ,
       category: "Sushi",
    
@@ -505,7 +504,7 @@ export const db = [
       description:"Notre restaurant dépend des produits de saison, notre carte est établie en fonction de l’arrivage du marché",
       promo: "",
       distance: 1.93,
-      fee: 15,
+      fee: "15.0 delivery",
       note: 5 ,
       category: "Sushi",
   
