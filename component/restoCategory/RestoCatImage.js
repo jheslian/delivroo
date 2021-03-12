@@ -12,7 +12,7 @@ export default class RestoCatImage extends React.Component {
             <ImageBackground
               resizeMode="cover"
               style={styles.cover}
-              source={{ uri: url }}
+              source={url}
             />
           </CardItem>
         </Card>

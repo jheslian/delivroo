@@ -7,6 +7,7 @@ import Card from "../component/homeMenu/Card";
 import HeaderHome from "../component/homeMenu/HeaderHome";
 import RestoH from "../container/RestoH";
 import { db } from "../restaurant";
+import { foodType } from "../FoodType";
 
 export default class HomeMenu extends React.Component {
   constructor() {
@@ -15,66 +16,13 @@ export default class HomeMenu extends React.Component {
   }
   render() {
     const { navigation } = this.props;
-    const foodType = [
-      
-      {
-        source: require("../assets/images/Categories/Groceries.png"),
-        name: "Epicerie",
-      },
-      {
-        source: require("../assets/images/Categories/Pizza.png"),
-        name: "Pizza",
-      },
-      {
-        source: require("../assets/images/Categories/Burger.png"),
-        name: "Burger",
-      },
-      {
-        source: require("../assets/images/Categories/Sandwich.png"),
-        name: "Sandwich",
-      },
-      {
-        source: require("../assets/images/Categories/Dessert.png"),
-        name: "Dessert",
-      },
-      {
-        source: require("../assets/images/Categories/Breakfast.png"),
-        name: "Petit-dej",
-      },
-      {
-        source: require("../assets/images/Categories/Sushi.png"),
-        name: "Sushi",
-      },
-      {
-        source: require("../assets/images/Categories/Tacos.png"),
-        name: "Tacos",
-      },
-      {
-        source: require("../assets/images/Categories/PokeBowl.png"),
-        name: "Poke-Bowl",
-      },
-      {
-        source: require("../assets/images/Categories/Kebab.png"),
-        name: "Kebab",
-      },
-      {
-        source: require("../assets/images/Categories/Vietnamese.png"),
-        name: "Viet",
-      },
-      {
-        source: require("../assets/images/Categories/Bagel.png"),
-        name: "Bagels",
-      },
-    ];
 
     return (
       <Container style={styles.container}>
         <HeaderHome
-          navigateToLogin={() => {
-            console.log(db);
-
-            this.props.navigation.navigate("Login");
-          }}
+          navigateToLogin={() =>
+            this.props.navigation.navigate("Login")
+          }
         />
         <ScrollView>
           <ScrollView horizontal={true}>
@@ -83,6 +31,7 @@ export default class HomeMenu extends React.Component {
                 <View key={index}>
                   <Card
                     horizontale={false}
+                    shopList={db}
                     categorie={this.state.categorie}
                     navigation={navigation}
                     name={photo.name}

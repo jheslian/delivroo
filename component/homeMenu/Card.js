@@ -14,10 +14,12 @@ export default class Card extends React.Component {
       width,
       height,
       navigation,
+      shopList,
       categorie,
     } = this.props;
     const pressHandler = () => {
-      navigation.navigate("Restaurant");
+      let result = shopList.filter(shop => shop.category == name);
+      navigation.navigate("Restaurant", { shopList: result });
     };
 
     return (

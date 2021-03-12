@@ -9,7 +9,7 @@ export default class OrderQtyImage extends React.Component {
         <Image
           resizeMode="cover"
           style={styles.cover}
-          source={{ uri: url }}
+          source={url}
         />
       </View>
     );
