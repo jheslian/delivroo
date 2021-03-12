@@ -21,7 +21,7 @@ export default class HeaderHome extends React.Component {
 
   render() {
     return (
-      <Header>
+      <Header style={styles.container}>
         <Left>
           <Image
             style={styles.image}
@@ -72,4 +72,7 @@ const styles = StyleSheet.create({
   location: {
     color: "#2e3434",
   },
+  container:{
+    backgroundColor: "#FFF"
+  }
 });

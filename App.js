@@ -5,7 +5,7 @@ import Navigator from "./routes/homeStack";
 
 export default function App() {
 
-  return <Navigator />;
+  return <Navigator/>;
 }
 
 const styles = StyleSheet.create({
