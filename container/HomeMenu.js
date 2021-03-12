@@ -43,8 +43,8 @@ export default class HomeMenu extends React.Component {
               );
             })}
           </ScrollView>
-          <ScrollView>
-            <Text>A la une</Text>
+          <ScrollView style={styles.scroll}>
+            <Text style={styles.txtTitle}>A la une</Text>
             <RestoH
               height={150}
               width={320}
@@ -53,8 +53,8 @@ export default class HomeMenu extends React.Component {
               }
             />
           </ScrollView>
-          <ScrollView>
-            <Text>Livraison la plus rapide</Text>
+          <ScrollView style={styles.scroll}>
+            <Text style={styles.txtTitle}>Livraison la plus rapide</Text>
             <RestoH
               height={175}
               width={300}
@@ -63,8 +63,8 @@ export default class HomeMenu extends React.Component {
               }
             />
           </ScrollView>
-          <ScrollView>
-            <Text>Meilleures notes</Text>
+          <ScrollView style={styles.scroll}>
+            <Text style={styles.txtTitle}>Meilleures notes</Text>
             <RestoH
               height={200}
               width={350}
@@ -86,4 +86,14 @@ const styles = StyleSheet.create({
     height: 32,
     borderRadius: 16,
   },
+  txtTitle:{
+    marginLeft: 25,
+    fontWeight: "bold",
+    fontSize: 17,
+    marginBottom: 7
+
+  },
+  scroll:{
+    marginTop: 20
+  }
 });
