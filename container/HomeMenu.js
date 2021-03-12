@@ -48,8 +48,9 @@ export default class HomeMenu extends React.Component {
             <RestoH
               height={150}
               width={320}
-              navigateToScreen={() =>
-                navigation.navigate("OneRestaurant")
+              filter="restaurantName"
+              navigateToScreen={(dish) =>
+                navigation.navigate("OneRestaurant",{dish})
               }
             />
           </ScrollView>
@@ -58,6 +59,7 @@ export default class HomeMenu extends React.Component {
             <RestoH
               height={175}
               width={300}
+              filter="distance"
               navigateToScreen={() =>
                 navigation.navigate("OneRestaurant")
               }
@@ -68,6 +70,7 @@ export default class HomeMenu extends React.Component {
             <RestoH
               height={200}
               width={350}
+              filter="note"
               navigateToScreen={() =>
                 navigation.navigate("OneRestaurant")
               }
