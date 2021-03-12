@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   StyleSheet,
   View,
+  Text,
   ScrollView,
   ImageBackground,
   TouchableOpacity,
@@ -9,12 +10,14 @@ import {
 import { db } from "../restaurant";
 
 export default class RestoH extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
-    const { width, height, navigateToScreen, filter } = this.props;
+    const {
+      width,
+      height,
+      navigateToScreen,
+      filter,
+      horizontal,
+    } = this.props;
 
     let result;
     if (filter == "distance") {
@@ -35,21 +38,22 @@ export default class RestoH extends React.Component {
       result = [db[4], db[9], db[13]];
     }
 
-    const pressHandler = (listsDish) => navigateToScreen(listsDish);
+    const pressHandler = listsDish => navigateToScreen(listsDish);
 
     return (
       <View style={styles.container}>
-        <ScrollView horizontal={true}>
-          {db.map((details, index) => {
-            console.log(details.listsDish)
+        <ScrollView horizontal={horizontal}>
+          {result.map((details, index) => {
             return (
               <View key={index}>
-                <TouchableOpacity onPress={pressHandler(details.listsDish)}>
+                <TouchableOpacity
+                  onPress={() => pressHandler(details.listsDish)}>
                   <ImageBackground
                     style={{
                       width: width,
                       height: height,
                       marginLeft: 10,
+                      marginTop: 15,
                       borderRadius: 5,
                       overflow: "hidden",
                     }}
@@ -57,6 +61,20 @@ export default class RestoH extends React.Component {
                       details.listsDish[0].url
                     }></ImageBackground>
                 </TouchableOpacity>
+
+                <Text
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    position: "absolute",
+                    bottom: 0,
+                    left: 10,
+                    marginBottom: 5,
+                    marginLeft: 10,
+                  }}>
+                  {details.restaurantName}
+                </Text>
               </View>
             );
           })}

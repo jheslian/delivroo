@@ -16,7 +16,6 @@ export default class Plats extends React.Component {
     } = this.props;
 
     const pressHandler = () => {
-      console.log("test");
       navigation.navigate("Order", {
         name: title,
         description,
@@ -28,7 +27,7 @@ export default class Plats extends React.Component {
     return (
       <View>
         <TouchableOpacity onPress={pressHandler}>
-          <Container style={styles.contener}>
+          <Container style={styles.container}>
             <Grid>
               <Col size={70}>
                 <Row size={70}>
@@ -65,7 +64,7 @@ export default class Plats extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  contener: {
+  container: {
     height: 170,
     paddingBottom: 25,
     paddingLeft: 5,

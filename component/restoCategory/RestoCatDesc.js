@@ -5,14 +5,7 @@ import { Card, CardItem, Body } from "native-base";
 
 export default class RestoCatDesc extends React.Component {
   render() {
-    const {
-      name,
-      fee,
-      description,
-      promo,
-      others,
-      distance,
-    } = this.props;
+    const { name, fee, description, promo, distance } = this.props;
     return (
       <View>
         <Card style={styles.container}>

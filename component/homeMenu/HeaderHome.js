@@ -9,24 +9,26 @@ import {
 import { Header, Left, Right, Body } from "native-base";
 
 export default class HeaderHome extends React.Component {
-  constructor() {
-    super();
-    this.state = { categorie: "All" };
-  }
 
   goLogin = () => {
     const { navigateToLogin } = this.props;
     navigateToLogin();
+  };
+  goAbout = () => {
+    const { navigateToAbout } = this.props;
+    navigateToAbout();
   };
 
   render() {
     return (
       <Header style={styles.container}>
         <Left>
-          <Image
-            style={styles.image}
-            source={require("../../assets/images/images.jpeg")}
-          />
+          <TouchableOpacity onPress={this.goAbout}>
+            <Image
+              style={styles.image}
+              source={require("../../assets/images/images.jpeg")}
+            />
+          </TouchableOpacity>
         </Left>
         <Body>
           <View style={styles.displayV}>
@@ -71,8 +73,9 @@ const styles = StyleSheet.create({
   },
   location: {
     color: "#2e3434",
+    fontWeight: "bold",
   },
-  container:{
-    backgroundColor: "#FFF"
-  }
+  container: {
+    backgroundColor: "#FFF",
+  },
 });

@@ -9,9 +9,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 export default class AddressForm extends React.Component {
   render() {
     const { navigation } = this.props;
-    const pressHandler = () => {
-      navigation.navigate("HomeMenu");
-    };
+    const pressHandler = () => navigation.navigate("HomeMenu");
 
     return (
       <Container

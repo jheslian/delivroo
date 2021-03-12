@@ -15,14 +15,6 @@ export default class OrderQty extends React.Component {
     const description = this.props.navigation.getParam("description");
     const name = this.props.navigation.getParam("name");
     const url = this.props.navigation.getParam("url");
-    const foodDesc = {
-      url:
-        "https://images.pexels.com/photos/9413/animal-cute-kitten-cat.jpg?cs=srgb&dl=adorable-animal-cat-9413.jpg&fm=jpg",
-      name: "Burger",
-      description:
-        "The burger details goes here! On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions",
-      price: 3,
-    };
 
     return (
       <View style={styles.container}>

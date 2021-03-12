@@ -17,6 +17,7 @@ export default class Card extends React.Component {
       shopList,
       categorie,
     } = this.props;
+
     const pressHandler = () => {
       let result = shopList.filter(shop => shop.category == name);
       navigation.navigate("Restaurant", { shopList: result });

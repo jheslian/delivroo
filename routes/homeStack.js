@@ -6,6 +6,7 @@ import Restaurant from "../container/RestoPerCategory";
 import OneRestaurant from "../container/ShowRestaurants";
 import Plat from "../component//homeMenu/Plats";
 import Order from "../container/OrderQty";
+import About from "../About";
 
 const screens = {
   HomeMenu: { screen: HomeMenu },
@@ -14,6 +15,7 @@ const screens = {
   OneRestaurant: { screen: OneRestaurant },
   Plat: { screen: Plat },
   Order: { screen: Order },
+  About: { screen: About },
 };
 
 const HomeStack = createStackNavigator(screens, {
